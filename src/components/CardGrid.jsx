@@ -1,0 +1,1 @@
+export default function CardGrid({ page }) { return ( <section className="card-grid"> {/* Card grid content goes here */} </section> ) }
