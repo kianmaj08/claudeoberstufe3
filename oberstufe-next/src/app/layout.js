@@ -1,5 +1,5 @@
 import { ClerkProvider } from '@clerk/nextjs'
-import { Instrument_Serif, Geist } from 'next/font/google'
+import { Instrument_Serif, Inter } from 'next/font/google'
 import './globals.css'
 
 const instrumentSerif = Instrument_Serif({
@@ -9,7 +9,7 @@ const instrumentSerif = Instrument_Serif({
   variable: '--font-display',
 })
 
-const geist = Geist({
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-ui',
 })
@@ -23,7 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
-      <html lang="de" className={`${instrumentSerif.variable} ${geist.variable}`}>
+      <html lang="de" className={`${instrumentSerif.variable} ${inter.variable}`}> 
         <body>{children}</body>
       </html>
     </ClerkProvider>
